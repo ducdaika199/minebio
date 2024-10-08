@@ -53,6 +53,12 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
+# Install Prisma CLI
+RUN npm install -g prisma
+
+# Push the Prisma schema to the database
+RUN prisma db push
+
 EXPOSE 3000
 ENV PORT 3000
 

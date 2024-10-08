@@ -10,6 +10,6 @@ services:
     working_dir: /app
     ports:
       - "3000:3000"
-    image: t3-app
+    image: ghcr.io/ducdaika199/minebio:latest
     environment:
       - DATABASE_URL=postgresql://postgres:G%n+m&bbfdA.3DiC@34.71.183.231:5432/postgres
